@@ -1,5 +1,5 @@
 # conways-game-of-life
-Java Implementation with readPatternFromFile method that animates any "%.LIF" file passed into the program
+Java Implementation with readPatternFromFile method that animates (in a GUI) any "%.LIF" file passed into the program
 
 **TO RUN:** 
 
