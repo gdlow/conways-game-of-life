@@ -2,6 +2,7 @@ package cgol;
 
 public class GameOfLifeApp {
     public GameOfLifeApp(String fileName) {
+        //700,600 recommended
         final GameOfLifeView gameOfLifeView = new GameOfLifeViewStdDraw(700, 600);
 
         final GameOfLifePresenter gameOfLifePresenter = new GameOfLifePresenter(
@@ -13,6 +14,6 @@ public class GameOfLifeApp {
         gameOfLifePresenter.start();
     }
     public static void main(String[] args) {
-        new GameOfLifeApp("VENETIAN.LIF");
+        new GameOfLifeApp("C3PUF.LIF");
     }
 }

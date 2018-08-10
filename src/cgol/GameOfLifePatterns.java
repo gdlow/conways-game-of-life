@@ -24,15 +24,6 @@ public class GameOfLifePatterns {
         }
     }
 
-
-    public boolean[][] getCurrentGeneration() {
-        return currentGeneration;
-    }
-
-    public void setCurrentGeneration(boolean[][] currentGeneration) {
-        this.currentGeneration = currentGeneration;
-    }
-
     public void readPatternFromFile(String fileName, int centX, int centY) {
         try {
             File patternFile = new File(String.format("resources/%s", fileName));
@@ -54,7 +45,7 @@ public class GameOfLifePatterns {
                 else if (line.startsWith("#P")) {
                     String[] parts = line.split(" ");
                     xCoord.add(centX + Integer.parseInt(parts[1]));
-                    yCoord.add(centY + Integer.parseInt(parts[2]));
+                    yCoord.add(centY - Integer.parseInt(parts[2]));
 
                     //Read the next line
                     String patternLine = null;
@@ -66,7 +57,7 @@ public class GameOfLifePatterns {
                         else if (patternLine.startsWith("#P")) {
                             parts = patternLine.split(" ");
                             xCoord.add(centX + Integer.parseInt(parts[1]));
-                            yCoord.add(centY + Integer.parseInt(parts[2]));
+                            yCoord.add(centY - Integer.parseInt(parts[2]));
                             //Moves on to next pattern in file
                             j = 0;
                             i++;
