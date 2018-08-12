@@ -19,7 +19,7 @@ public class GameOfLifeViewStdDraw implements GameOfLifeView {
         StdDraw.setYscale(0, height);
         StdDraw.setXscale(0, width);
         StdDraw.setPenRadius(0);
-        StdDraw.setPenColor(StdDraw.BOOK_RED);
+        StdDraw.setPenColor(StdDraw.BLACK);
     }
 
     public int getHeight() {

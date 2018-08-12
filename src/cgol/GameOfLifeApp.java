@@ -14,6 +14,8 @@ public class GameOfLifeApp {
         gameOfLifePresenter.start();
     }
     public static void main(String[] args) {
-        new GameOfLifeApp("C3PUF.LIF");
+        // Run from root directory: java -cp out/production/cgol cgol.GameOfLifeApp -fileName
+        String fileName = args[0];
+        new GameOfLifeApp(fileName);
     }
 }
